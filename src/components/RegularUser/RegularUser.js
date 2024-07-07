@@ -5,9 +5,9 @@ import CreatePass from "./CreatePass";
 
 const RegularUser = () => {
   return (
-    <div className="bg-green-400 my-10 rounded-md p-4 flex flex-col items-center lg:w-[90vw] m-auto">
-      <div className="font-semibold text-4xl w-full text-center py-4 mb-5 rounded-lg bg-gray-300">
-        Regular User
+    <div className="bg-white my-10 rounded-md p-4 flex flex-col items-center lg:w-[90vw] m-auto">
+      <div className="font-semibold text-4xl w-full text-center py-4 mb-5 rounded-lg bg-black text-white">
+        Manufacturer/Seller
       </div>
       <div className="flex md:flex md:flex-row flex-col w-full grow justify-between">
         <div className="flex grow">

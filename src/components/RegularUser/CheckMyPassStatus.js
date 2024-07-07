@@ -27,14 +27,14 @@ const CheckMyPassStatus = () => {
   };
 
   return (
-    <div className="flex flex-col font-semibold bg-green-300 rounded-lg my-4 items-center border p-4 w-full">
-      <div className="bg-emerald-400 w-full p-2 rounded-md sm:text-2xl font-bold text-center flex justify-between gap-3 items-center">
-        Check Your Pass Status
+    <div className="flex flex-col font-semibold bg-white rounded-lg my-4 items-center border p-4 w-full">
+    <div className="bg-black w-full p-2 rounded-md sm:text-2xl font-bold text-center flex justify-between gap-3 items-center text-white">
+        Product Detail
         <button
-          className="text-lg hover:bg-violet-500 bg-orange-700 rounded-md p-1 font-bold text-white"
+          className="text-lg hover:bg-violet-500 bg-pink-700 rounded-md p-1 font-bold text-white"
           onClick={handleRefresh}
         >
-          Refresh
+          Clear
         </button>
       </div>
       <table className="w-full sm:text-2xl text-center">
@@ -46,37 +46,37 @@ const CheckMyPassStatus = () => {
         </thead>
         <tbody>
           <tr>
-            <td className="w-[50%]">Unique ID</td>
+            <td className="w-[50%]">Product SN</td>
             <td className="w-[50%]">{status.uniqueID}</td>
           </tr>
-          <tr>
+          {/* <tr>
             <td>Pass Created Time</td>
             <td>{status.created_time}</td>
-          </tr>
+          </tr> */}
           <tr>
             <td className="w-[50%]">Titile</td>
             <td className="w-[50%]">{status.title}</td>
           </tr>
           <tr>
-            <td>Description</td>
+            <td>Product Name:</td>
             <td>{status.descrip}</td>
           </tr>
-          <tr>
+          {/* <tr>
             <td>Out Time</td>
             <td>{status.out_time}</td>
-          </tr>
+          </tr> */}
           <tr>
-            <td>Is Approval</td>
-            <td>{status.approval ? "Approved" : "Not Approved"}</td>
+            <td>Transaction</td>
+            <td>{status.approval ? "non-Approved" : " Approved"}</td>
           </tr>
-          <tr>
+          {/* <tr>
             <td>In Time</td>
             <td>{status.in_time}</td>
-          </tr>
-          <tr>
+          </tr> */}
+          {/* <tr>
             <td>Is Expired</td>
             <td>{status.isexpired ? "Expired" : "Not Expired"}</td>
-          </tr>
+          </tr> */}
         </tbody>
       </table>
     </div>

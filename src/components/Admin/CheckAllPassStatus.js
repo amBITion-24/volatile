@@ -23,14 +23,14 @@ const CheckAllPassStatus = () => {
   };
 
   return (
-    <div className="flex flex-col bg-yellow-300 rounded-lg my-4 items-center border p-4 min-w-max">
-      <div className="bg-emerald-400 w-full p-2 rounded-md sm:text-2xl text-center flex gap-3 justify-between items-center font-bold">
-        Check All Pass Status
+    <div className="flex flex-col bg-white rounded-lg my-4 items-center border border-black p-4 min-w-max">
+    <div className="bg-black w-full p-2 rounded-md sm:text-2xl text-center flex gap-3 justify-between items-center font-bold text-white">
+        Products Scanned
         <button
-          className="text-lg hover:bg-violet-500 bg-orange-700 rounded-md p-1 font-bold text-white"
+          className="text-lg hover:bg-violet-500 bg-pink-700 rounded-md p-1 font-bold text-white"
           onClick={handleRefresh}
         >
-          Refresh
+          clear
         </button>
       </div>
       <div className="text-center flex justify-center sm:text-2xl font-semibold ">
