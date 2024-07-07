@@ -23,7 +23,7 @@ const ApprovePass = () => {
         <table className="flex flex-col gap-3">
           <thead className="border-b-2 border-blue-700">
             <tr className="text-center flex gap-4 justify-between">
-              <th className="text-center">Pending Pass IDs</th>
+              <th className="text-center">Pending Products</th>
               <th className="text-center">Approve</th>
             </tr>
           </thead>

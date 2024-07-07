@@ -64,7 +64,7 @@ const CreatePass = () => {
             <input
               type="text"
               className="md:w-full  p-2 rounded-md"
-              placeholder="Enter Title Here"
+              placeholder="Enter SN Here"
               onChange={(e) => {
                 setTitle(e.target.value);
               }}
@@ -75,7 +75,7 @@ const CreatePass = () => {
             <input
               type="text"
               className="md:w-full p-2 rounded-md"
-              placeholder="Enter Description Here"
+              placeholder="Enter Name Here"
               onChange={(e) => {
                 setDescription(e.target.value);
               }}
