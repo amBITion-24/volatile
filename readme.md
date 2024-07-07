@@ -2,14 +2,14 @@
 
 # Product Authenticator (Blockchian Based Dapp)
 
-Our project Product authenticator dApp is a blockchain based application which we have deployed on the stellar blockchain. It is basically a QRcode scanner. QRcode will be pasted on every product and the application will tell the whole journey of that particular product by scanning the QRcode. Like from manufacturing to distribution to sellar to the consumer, all stages of manufacturing can be seen through one click.
+Our project Product authenticator dApp is a blockchain based application which we have deployed on the stellar blockchain. It is basically a QRcode scanner.We intent that QRcode will be pasted on every product and the application will tell the whole journey of that particular product by scanning the QRcode. Like from manufacturing to distribution to sellar to the consumer, all stages of manufacturing can be seen through one click.
 
 
 ---
 
 ## Vision of our project
 
-The vision is to reduce fraud in several industries like food, medicine, defence etc. Fake items in the food, medicine, and defense sectors can lead to severe health risks, economic losses, and compromised safety. So, with this application, at every block of production(manufacture, distribution, sellar) they have to put complete valid information about the product which at the end combines with this blockchain application and helps people consume the right safe product.
+The vision is to reduce fraud in several industries like food, medicine, defence etc. Fake items in the food, medicine, and defense sectors can lead to severe risks and compromised safety. So, with this application, at every block of production(manufacture, distribution, sellar) they will have to put complete valid information about the product which at the end combines with this blockchain application and helps people consume the right safe product.
 
 
 ## Key features
@@ -29,17 +29,20 @@ The vision is to reduce fraud in several industries like food, medicine, defence
 4. Consumer Goods: Provide transparency and authenticity for various consumer products, enhancing brand trust.
 
 
-## The Tech and Tools used:
+## Tech and Tools used:
 
 - [Rust] Programming Language & Web3
-- Crypto Wallet[Freighter]
-- [Sorobon-SDK] to develop the smart-contract
+- Crypto Wallet: [Freighter]
+- [Soroban-SDK] to develop the smart-contract
 - Stellar Blockchain (Testnet)
 - [Javascript] to build the frontend 
 
+## References: 
+
+- https://github.com/bhupendra-chouhan/CratePass-Soroban 
+- https://github.com/yogeshxd/FraudBlock 
+
 ---
-
-
 
 ## Road Maps/Future Plans
 
