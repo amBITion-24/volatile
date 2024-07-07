@@ -46,7 +46,7 @@ const CheckMyPassStatus = () => {
         </thead>
         <tbody>
           <tr>
-            <td className="w-[50%]">Product SN</td>
+            <td className="w-[50%]">unique_key</td>
             <td className="w-[50%]">{status.uniqueID}</td>
           </tr>
           {/* <tr>
@@ -54,7 +54,7 @@ const CheckMyPassStatus = () => {
             <td>{status.created_time}</td>
           </tr> */}
           <tr>
-            <td className="w-[50%]">Titile</td>
+            <td className="w-[50%]">Product SN</td>
             <td className="w-[50%]">{status.title}</td>
           </tr>
           <tr>

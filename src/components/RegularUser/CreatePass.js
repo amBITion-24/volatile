@@ -60,7 +60,7 @@ const CreatePass = () => {
             />
           </div>
           <div className="md:flex items-center justify-between">
-            <p className="w-48 text-xl mx-2">Product Sn: </p>
+            <p className="w-48 text-xl mx-2">Product SN: </p>
             <input
               type="text"
               className="md:w-full  p-2 rounded-md"

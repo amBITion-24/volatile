@@ -27,7 +27,6 @@ const Header = ({setPubKey}) => {
       <div
         className="text-2xl sm:text-3xl lg:text-3xl font-semibold text-white flex items-center gap-5"
       >
-        {/* <img src={StellarLogo} alt="CratePass X Stellar" className="w-11" /> */}
         <span className="text-white">Product Authenticator</span>
       </div>
 
