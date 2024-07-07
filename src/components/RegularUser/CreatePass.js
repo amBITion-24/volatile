@@ -43,10 +43,10 @@ const CreatePass = () => {
   }
 
   return (
-    <div className="md:mr-[50px] md:ml-[50px] bg-yellow-300 sm:w-[98%] rounded-lg p-5">
-      <p className="bg-cyan-500 sm:text-2xl font-bold  p-2 rounded-md text-center flex justify-between gap-3 items-center font-bol">
-        Create Pass:
-      </p>
+    <div className="md:mr-[50px] md:ml-[50px] bg-white sm:w-[98%] rounded-lg p-10 border border-black">
+    <div className="bg-black sm:text-2xl font-bold p-2 rounded-md flex items-center justify-center h-16">
+      <p className="text-white">Manufacturer Wallet</p>
+      </div>
       <div className="w-[90%] m-auto flex flex-col gap-5 items-center justify-center">
         <div className="sm:w-[70%] py-2 flex flex-col gap-3">
           <div className="md:flex items-center justify-between">
@@ -60,7 +60,7 @@ const CreatePass = () => {
             />
           </div>
           <div className="md:flex items-center justify-between">
-            <p className="w-48 text-xl mx-2">Title: </p>
+            <p className="w-48 text-xl mx-2">Product Sn: </p>
             <input
               type="text"
               className="md:w-full  p-2 rounded-md"
@@ -71,7 +71,7 @@ const CreatePass = () => {
             />
           </div>
           <div className="md:flex items-center justify-between">
-            <p className="w-48 text-xl mx-2">Description: </p>
+            <p className="w-48 text-xl mx-2">Product Name: </p>
             <input
               type="text"
               className="md:w-full p-2 rounded-md"
@@ -86,12 +86,12 @@ const CreatePass = () => {
           className="p-2 rounded-md text-white bg-green-600 hover:bg-green-800"
           onClick={handleCreatePass}
         >
-          Create Pass
+          Add Product
         </button>
       </div>
       <div className="text-center text-wrap max-w-full pt-4">
         <p className="text-red-500 text-xl">
-          Note :- If your Wallet doesn't popup? You might have a pending pass.
+          {/* Note :- If your Wallet doesn't popup? You might have a pending pass. */}
         </p>
       </div>
     </div>
