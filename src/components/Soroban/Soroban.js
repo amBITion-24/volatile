@@ -14,10 +14,10 @@ let rpcUrl = "https://soroban-testnet.stellar.org";
 let contractAddress =
   "CDHHT6IKGRCFPSYJNKR2JEC3GUHRXGPIDUE2JN4LQLZMTCHYKLB4KZ7D";
 
-// coverting Account Address to ScVal form
+
 const accountToScVal = (account) => new Address(account).toScVal();
 
-// coverting String to ScVal form
+
 const stringToScValString = (value) => {
   return nativeToScVal(value);
 };
@@ -56,7 +56,7 @@ async function contractInt(caller, functName, values) {
 
   let _buildTx = await provider.prepareTransaction(buildTx);
 
-  let prepareTx = _buildTx.toXDR(); // pre-encoding (converting it to XDR format)
+  let prepareTx = _buildTx.toXDR(); 
 
   let signedTx = await userSignTransaction(prepareTx, "TESTNET", caller);
 
@@ -72,7 +72,7 @@ async function contractInt(caller, functName, values) {
     }
     if (sendTx.status === "PENDING") {
       let txResponse = await provider.getTransaction(sendTx.hash);
-      //   we will continously checking the transaction status until it gets successfull added to the blockchain ledger or it gets rejected
+      
       while (txResponse.status === "NOT_FOUND") {
         txResponse = await provider.getTransaction(sendTx.hash);
         await new Promise((resolve) => setTimeout(resolve, 100));
@@ -89,9 +89,9 @@ async function contractInt(caller, functName, values) {
 }
 
 
-// function to interact with it's respective smart contract functions:
 
-// Working fine
+
+
 async function createPass(caller, title, descrip) {
   let titleScVal = stringToScValString(title);
   let descripScVal = stringToScValString(descrip);
@@ -101,8 +101,8 @@ async function createPass(caller, title, descrip) {
     const passId = await contractInt(caller, "create_pass", values);
     let resolvedPassId = Number(passId?._value?._value);
     console.log(resolvedPassId);
-    // passId.then(res => resolvedPassId = res)
-    // console.log(`!!Pass ID - ${resolvedPassId}, is Created!!`);
+    
+    
     return resolvedPassId;
   } catch (error) {
     console.log("Pass not created. Check if you already have a active pass");
@@ -110,9 +110,9 @@ async function createPass(caller, title, descrip) {
 }
 
 
-// Working fine 
+
 async function approvePass(caller, pass_id) {
-  // let accountScVal = accountToScVal(caller);
+  
   let values = numberToU64(pass_id);
 
   try {
@@ -123,7 +123,7 @@ async function approvePass(caller, pass_id) {
   }
 }
 
-//   
+
 async function expirePass(caller, pass_id) {
   let values = numberToU64(pass_id);
 
@@ -136,21 +136,21 @@ async function expirePass(caller, pass_id) {
 }
 
 
-// Working fine
+
 async function  fetchAllPassStatus(caller) {
   try {
     let result = await contractInt(caller, "view_all_pass_status", null);
 
-    // Approval Status:
+    
     let approvedVal = Number(result?._value[0]?._attributes?.val?._value);
 
-    // Expired Status:
+    
     let expiredVal = Number(result?._value[1]?._attributes?.val?._value);
 
-    // Pending Status:
+    
     let pendingVal = Number(result?._value[2]?._attributes?.val?._value);
 
-    // Total Status:
+    
     let totalVal = Number(result?._value[3]?._attributes?.val?._value);
 
     console.log(approvedVal, expiredVal, pendingVal, totalVal);
@@ -165,7 +165,7 @@ async function  fetchAllPassStatus(caller) {
   }
 }
 
-// Working fine
+
 async function fetchMyPassStatus(caller, pass_id) {
   let values = numberToU64(pass_id);
   let result1;
@@ -173,47 +173,47 @@ async function fetchMyPassStatus(caller, pass_id) {
 
   try {
     result1 = await contractInt(caller, "view_my_pass", values);
-    // console.log("result-1 is has arived!", result1);
+    
   } catch (error) {
     console.log("Unable to fetch Your Pass Status!!");
   }
   
   try {
     result2 = await contractInt(caller, "view_ac_pass_by_unique_id", values);
-    // console.log("result-2 is has arived!", result2);
+    
   } catch (error) {
     console.log("Unable to fetch Your Pass Status!!");
   }
   
-  // Pass Created Time:
+  
   let createdTimeVal = Number(result1?._value[0]?._attributes?.val?._value);
   console.log(createdTimeVal);
 
-  // Pass Description:
+  
   let descripVal = result1?._value[1]?._attributes?.val?._value?.toString();
   console.log(descripVal);
 
-  // In Time:
+  
   let inTimeVal = Number(result1?._value[2]?._attributes?.val?._value);
   console.log(inTimeVal);
 
-  // Is Expired:
+  
   let isExpiredVal = result1?._value[3]?._attributes?.val?._value;
   console.log(isExpiredVal);
 
-  // Pass Title:
+  
   let titleVal = result1?._value[4]?._attributes?.val?._value?.toString();
   console.log(titleVal);
 
-  // Pass ID:
+  
   let passIdVal = Number(result1?._value[5]?._attributes?.val?._value);
   console.log(passIdVal);
 
-  // Approval status:
+  
   let approvalStatusVal = result2?._value[1]?._attributes?.val?._value;
   console.log(approvalStatusVal);
 
-  // Pass ID:
+  
   let outTimeVal = Number(result2?._value[2]?._attributes?.val?._value);
   console.log(outTimeVal);
 

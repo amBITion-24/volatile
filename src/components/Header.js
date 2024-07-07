@@ -71,9 +71,3 @@ const Header = ({setPubKey}) => {
 
 export default Header;
 
-/* Connect wallet function:
-
-1. To enable connection between the wallet and the web application.
-2. To get the public key of the connected wallet.
-3. Signing the transaction.
-*/

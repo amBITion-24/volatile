@@ -18,23 +18,23 @@ const CreatePass = () => {
     console.log("passId: ", passId);
   };
 
-  // Storing list of newly created pass_ids/account addresss to local storage in string format:
+
   useEffect(() => {
     setLocalStorageKey(passId);
   }, [passId]);
 
-  // setting every passId's approval status to 'false' and storing it inside the local storage.
+
   function setLocalStorageKey(key) {
-    // Check if the key is a positive number and not undefined or null
+    
     if (
       typeof key === "number" &&
       key > 0 &&
       key !== null &&
       key !== undefined
     ) {
-      // Convert the key to a string to use it in local storage
+    
       const keyString = key.toString();
-      // Set the default value to false
+      
       localStorage.setItem(keyString, JSON.stringify(false));
       console.log(`Key "${keyString}" added with default value false.`);
     } else {
