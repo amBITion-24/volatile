@@ -35,7 +35,7 @@ The vision is to reduce fraud in several industries like food, medicine, defence
 - Crypto Wallet: [Freighter]
 - [Soroban-SDK] to develop the smart-contract
 - Stellar Blockchain (Testnet)
-- [Javascript] to build the frontend 
+- [React.Js] to build the frontend 
 
 <img src = "readmeImages\image2.jpg" width="600" height="400">
 
