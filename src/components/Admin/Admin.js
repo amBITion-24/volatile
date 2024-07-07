@@ -13,7 +13,7 @@ const Consumer = () => {
         <ApprovePass />
       </div>
     </div>
-    </div>
+    
   );
 };
 
