@@ -41,6 +41,7 @@ The vision is to reduce fraud in several industries like food, medicine, defence
 
 - https://github.com/bhupendra-chouhan/CratePass-Soroban 
 - https://github.com/yogeshxd/FraudBlock 
+- https://developers.stellar.org/docs/tools/sdks
 
 ---
 
