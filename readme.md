@@ -1,6 +1,6 @@
 
 
-# Product Authenticator (Blockchian Based Dapp)
+# Product Authenticator (Blockchain Based Dapp)
 
 Our project Product authenticator dApp is a blockchain based application which we have deployed on the stellar blockchain. It is basically a QRcode scanner.We intent that QRcode will be pasted on every product and the application will tell the whole journey of that particular product by scanning the QRcode. Like from manufacturing to distribution to sellar to the consumer, all stages of manufacturing can be seen through one click.
 
@@ -35,7 +35,7 @@ The vision is to reduce fraud in several industries like food, medicine, defence
 - Crypto Wallet: [Freighter]
 - [Soroban-SDK] to develop the smart-contract
 - Stellar Blockchain (Testnet)
-- [Javascript] to build the frontend 
+- [React.Js] to build the frontend 
 
 <img src = "readmeImages\image2.jpg" width="600" height="400">
 
