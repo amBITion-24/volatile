@@ -199,7 +199,7 @@ impl GatePassContract {
         let key = Passbook::Pass(uniqueid.clone()); 
         
         env.storage().instance().get(&key).unwrap_or(Pass {
-           
+        
             unique_id: 0,
             title: String::from_str(&env, "Not_Found"),
             descrip: String::from_str(&env, "Not_Found"),
@@ -216,7 +216,7 @@ impl GatePassContract {
         let ac_key = Adminbook::Admincontrol(unique_id.clone()); 
         
         env.storage().instance().get(&ac_key).unwrap_or(Admincontrol {
-           
+        
             ac_id: 0,
             out_time: 0,
             approval: false,
