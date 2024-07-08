@@ -49,10 +49,7 @@ const CheckMyPassStatus = () => {
             <td className="w-[50%]">unique_key</td>
             <td className="w-[50%]">{status.uniqueID}</td>
           </tr>
-          {/* <tr>
-            <td>Pass Created Time</td>
-            <td>{status.created_time}</td>
-          </tr> */}
+         
           <tr>
             <td className="w-[50%]">Product SN</td>
             <td className="w-[50%]">{status.title}</td>
@@ -61,22 +58,11 @@ const CheckMyPassStatus = () => {
             <td>Product Name:</td>
             <td>{status.descrip}</td>
           </tr>
-          {/* <tr>
-            <td>Out Time</td>
-            <td>{status.out_time}</td>
-          </tr> */}
+         
           <tr>
             <td>Transaction</td>
             <td>{status.approval ? "non-Approved" : " Approved"}</td>
           </tr>
-          {/* <tr>
-            <td>In Time</td>
-            <td>{status.in_time}</td>
-          </tr> */}
-          {/* <tr>
-            <td>Is Expired</td>
-            <td>{status.isexpired ? "Expired" : "Not Expired"}</td>
-          </tr> */}
         </tbody>
       </table>
     </div>

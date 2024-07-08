@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { checkConnection, retrievePublicKey } from "./Freighter";
-import StellarLogo from "../assets/stellarlogo.png"
+
 
 const Header = ({setPubKey}) => {
   const [connect, getConnected] = useState("Connect");
